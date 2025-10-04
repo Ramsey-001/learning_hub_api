@@ -8,8 +8,9 @@ class PostsController < ApplicationController
 
   def show
     post = Post.find(params[:id])
-    render json: post, include: :comments
+    render json: post, include: { comments: { include: :user } }
   end
+
 
   def create
     post = current_user.posts.build(post_params)
@@ -19,6 +20,12 @@ class PostsController < ApplicationController
       render json: {errors: post.errors.full_messages }, status: :unprocessable_entity
     end
   end
+  def destroy
+    post = current_user.posts.find(params[:id])
+    post.destroy
+    head :no_content
+  end
+
 
   private
 
