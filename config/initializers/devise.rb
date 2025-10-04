@@ -30,7 +30,7 @@ config.jwt do |jwt|
     ['DELETE', %r{^/users/sign_out$}]  # logout
   ]
 
-  jwt.expiration_time = 2.hours.to_i
+  jwt.expiration_time = 24.hours.to_i
 end
 
 # Make Devise purely API (no sessions or redirects)
