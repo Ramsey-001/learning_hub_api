@@ -41,7 +41,7 @@ Frontend Example: Vue.js (can be any JS frontend)
 
 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/learninghub-api.git
+git clone https://github.com/Ramsey-001/learninghub-api.git
 cd learninghub-api
 
 2️⃣ Install dependencies
